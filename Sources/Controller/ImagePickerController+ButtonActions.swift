@@ -38,7 +38,7 @@ extension ImagePickerController {
         imagePickerDelegate?.imagePicker(self, didFinishWithAssets: assetStore.assets)
         
         if settings.dismiss.enabled {
-            dismiss(animated: true)
+            //dismiss(animated: true)
         }
     }
 
