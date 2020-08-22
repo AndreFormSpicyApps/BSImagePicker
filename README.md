@@ -88,6 +88,7 @@ Users are encouraged to become active participants in its continued development 
 
 If you wish to make a change, [open a Pull Request](https://github.com/mikaoj/BSImagePicker/pull/new) — even if it just contains a draft of the changes you’re planning, or a test that reproduces an issue — and we can discuss it further from there.
 More Info:
+• will follow
 
 ## License
 
