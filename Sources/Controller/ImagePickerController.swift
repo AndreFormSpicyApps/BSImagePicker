@@ -29,7 +29,7 @@ import Photos
     public weak var imagePickerDelegate: ImagePickerControllerDelegate?
     public var settings: Settings = Settings()
     public var doneButton: UIBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
-    public var cancelButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: nil, action: nil)
+    public var leftDoneButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
     public var albumButton: UIButton = UIButton(type: .custom)
     public var selectedAssets: [PHAsset] {
         get {
@@ -41,7 +41,9 @@ import Photos
     // Figure out why. Until then, expose the variable for users to set to whatever they want it localized to
     // TODO: Fix this ^^
     /// Title to use for button
-    public var doneButtonTitle = Bundle(identifier: "com.apple.UIKit")?.localizedString(forKey: "Done", value: "Done", table: "") ?? "Done"
+    
+  
+    public var doneButtonTitle = "Share as JPEG"
 
     // MARK: Internal properties
     var assetStore: AssetStore
@@ -127,9 +129,9 @@ import Photos
         doneButton.action = #selector(doneButtonPressed(_:))
         firstViewController?.navigationItem.rightBarButtonItem = doneButton
 
-        cancelButton.target = self
-        cancelButton.action = #selector(cancelButtonPressed(_:))
-        firstViewController?.navigationItem.leftBarButtonItem = cancelButton
+        leftDoneButton.target = self
+        leftDoneButton.action = #selector(cancelButtonPressed(_:))
+        firstViewController?.navigationItem.leftBarButtonItem = leftDoneButton
         
         updatedDoneButton()
         updateAlbumButton()
