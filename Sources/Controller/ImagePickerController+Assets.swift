@@ -27,6 +27,7 @@ extension ImagePickerController: AssetsViewControllerDelegate {
     func assetsViewController(_ assetsViewController: AssetsViewController, didSelectAsset asset: PHAsset) {
         if settings.selection.unselectOnReachingMax && assetStore.count > settings.selection.max {
             if let first = assetStore.removeFirst() {
+                showExceededCounterAlert()
                 assetsViewController.unselect(asset:first)
                 imagePickerDelegate?.imagePicker(self, didDeselectAsset: first)
             }
@@ -48,4 +49,16 @@ extension ImagePickerController: AssetsViewControllerDelegate {
         
         pushViewController(previewViewController, animated: true)
     }
+    
+   func showExceededCounterAlert()  {
+       print("-------------- function: \(#function) - line: \(#line) - file: \(#file)")
+       let alert = UIAlertController(title: "You can select up to 3 images.", message: "To select unlimited images - unlock the \"plus\" feature in the store section of the app.", preferredStyle: .alert)
+
+       alert.addAction(UIAlertAction(title: "Done", style: .default , handler:{ (action) in
+       }))
+       
+       self.present(alert, animated: true) {
+       }
+
+   }
 }
