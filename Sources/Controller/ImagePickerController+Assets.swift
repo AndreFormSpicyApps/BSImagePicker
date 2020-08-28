@@ -51,14 +51,10 @@ extension ImagePickerController: AssetsViewControllerDelegate {
     }
     
    func showExceededCounterAlert()  {
-       print("-------------- function: \(#function) - line: \(#line) - file: \(#file)")
        let alert = UIAlertController(title: "You can select up to 3 images.", message: "To select unlimited images - unlock the \"plus\" feature in the store section of the app.", preferredStyle: .alert)
-
        alert.addAction(UIAlertAction(title: "Done", style: .default , handler:{ (action) in
        }))
-       
        self.present(alert, animated: true) {
        }
-
    }
 }
