@@ -51,8 +51,8 @@ extension ImagePickerController: AssetsViewControllerDelegate {
     }
     
    func showExceededCounterAlert()  {
-       let alert = UIAlertController(title: "You can select up to 3 images.", message: "To select unlimited images - unlock the \"plus\" feature in the store section of the app.", preferredStyle: .alert)
-       alert.addAction(UIAlertAction(title: "Done", style: .default , handler:{ (action) in
+       let alert = UIAlertController(title: NSLocalizedString("kAS3ImagesTitle", comment: ""), message: NSLocalizedString("kAS3ImagesMessage", comment: ""), preferredStyle: .alert)
+       alert.addAction(UIAlertAction(title: NSLocalizedString("kASDone", comment: ""), style: .default , handler:{ (action) in
        }))
        self.present(alert, animated: true) {
        }
