@@ -43,7 +43,7 @@ import Photos
     /// Title to use for button
     
   
-    public var doneButtonTitle = "Share as JPEG"
+    public var doneButtonTitle = NSLocalizedString("kASShareJPEG", comment: "")
 
     // MARK: Internal properties
     var assetStore: AssetStore
